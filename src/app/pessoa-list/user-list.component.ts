@@ -1,6 +1,6 @@
-import { PessoamodelService } from './../../service/pessoamodel.service';
+import { Pessoamodel } from './../model/pessoamodel';
+import { PessoamodelService } from './../service/pessoamodel.service';
 import { Component, OnInit } from '@angular/core';
-import { Pessoamodel } from '../../model/pessoamodel';
 import { Router } from '@angular/router';
 
 
