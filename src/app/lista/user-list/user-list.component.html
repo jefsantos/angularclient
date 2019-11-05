@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Identificacao:</th>
+            <th scope="col">Nome:</th>
+            <th scope="col">Email:</th>
+            <th scope="col">Whatsapp:</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pessoamodel of pessoas">
+            <td>{{ pessoamodel.id}}</td>
+            <td>{{ pessoamodel.nome }}</td>
+            <td>{{ pessoamodel.email}}</td>
+            <td>{{ pessoamodel.whatsapp}}</td>
+            <td><button (click)="excluir(pessoamodel.id)">Delete</button></td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
