@@ -11,11 +11,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let passeiomodel of passeios">
-            <td>{{ passeiomodel.id}}</td>
-            <td>{{ passeiomodel.nome }}</td>
-            <td>{{ passeiomodel.valor}}</td>
+            <td>{{ passeiomodel.id_passeio}}</td>
+            <td>{{ passeiomodel.nome_passeio }}</td>
+            <td>{{ passeiomodel.valor_passeio}}</td>
 
-            <td><button (click)="excluir(passeiomodel.id)">Delete</button></td>
+            <td><button (click)="excluir(passeiomodel.id_passeio)">Delete</button></td>
 
 
           </tr>
