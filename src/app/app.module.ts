@@ -17,6 +17,7 @@ import { PessoamodelService } from './service/pessoamodel.service';
 import { PasseiomodelFormComponent } from './passeiomodel-form/passeiomodel-form.component';
 import { PasseioListComponent } from './passeio-list/passeio-list.component';
 import { PasseiomodelService } from './service/service-passeio/passeiomodel-service.service';
+import { EmpresamodelComponent } from './model/empresamodel/empresamodel.component';
 
 
 
@@ -27,7 +28,8 @@ import { PasseiomodelService } from './service/service-passeio/passeiomodel-serv
     UserListComponent,
     PessoamodelFormComponent,
     PasseiomodelFormComponent,
-    PasseioListComponent
+    PasseioListComponent,
+    EmpresamodelComponent
     
   ],
   imports: [

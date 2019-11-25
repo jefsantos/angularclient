@@ -14,7 +14,7 @@ export class PessoamodelService {
   private PessoamodelUrl: string;
  
   constructor(private http: HttpClient) {
-    this.PessoamodelUrl = 'http://localhost:8090/service/pessoa';
+    this.PessoamodelUrl = 'http://localhost:8092/service/pessoa';
   }
  
   public findAll(): Observable<Pessoamodel[]> {
