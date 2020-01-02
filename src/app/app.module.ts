@@ -1,3 +1,5 @@
+import { CarroListComponent } from './carro-list/carro-list.component';
+
 import { UserListComponent } from './pessoa-list/user-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +16,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { PessoamodelService } from './service/pessoamodel.service';
+
+import { CarromodelService } from './service/carromodel.service';
+
 import { PasseiomodelFormComponent } from './passeiomodel-form/passeiomodel-form.component';
+import { CarromodelFormComponent } from './carromodel-form/carromodel-form.component';
 import { PasseioListComponent } from './passeio-list/passeio-list.component';
 import { PasseiomodelService } from './service/service-passeio/passeiomodel-service.service';
 
@@ -25,8 +31,10 @@ import { PasseiomodelService } from './service/service-passeio/passeiomodel-serv
   declarations: [
     AppComponent,
     UserListComponent,
+    CarroListComponent,
     PessoamodelFormComponent,
     PasseiomodelFormComponent,
+    CarromodelFormComponent,
     PasseioListComponent
     
   ],
@@ -36,7 +44,7 @@ import { PasseiomodelService } from './service/service-passeio/passeiomodel-serv
     HttpClientModule,
     FormsModule
   ],
-  providers: [PessoamodelService, PasseiomodelService],
+  providers: [PessoamodelService, PasseiomodelService, CarromodelService],
   
   bootstrap: [AppComponent]
 })

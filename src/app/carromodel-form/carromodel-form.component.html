@@ -1,0 +1,40 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      
+        <div class="form-group">
+          <label for="nome">Modelo</label>
+          <input type="text" [(ngModel)]="carromodel.modelo" 
+            class="form-control" id="modelo" name="modelo" placeholder="Informe o modelo"
+            required #modelo="ngModel">
+        </div>
+        <div [hidden]="!modelo.pristine" class="alert alert-danger">modelo é Obrigatorio</div>
+
+        <div class="form-group">
+          <label for="quantidade_Vagas">quantidade_Vagas</label>
+          <input type="text" [(ngModel)]="carromodel.quantidade_Vagas" 
+            class="form-control" id="quantidade_Vagas" name="quantidade_Vagas" placeholder="A Quantidade de Vagas Livres" required #quantidade_Vagas="ngModel">
+          <div [hidden]="!quantidade_Vagas.pristine" class="alert alert-danger">Qtd Total</div>
+        </div>
+
+        <div class="form-group">
+        <label for="whatsapp">quantidade_Livre</label>
+        <input type="text" [(ngModel)]="carromodel.quantidade_Livre"
+        class="form-control" id="quantidade_Livre" name="quantidade_Livre" placeholder="Cadastre seu telefone" required #quantidade_Livre="ngModel"  >
+        <div [hidden]="!quantidade_Livre.pristine" class="alert alert-danger">Qtd Livre</div>
+      </div>
+
+      <div class="form-group">
+        <label for="whatsapp">Empresa</label>
+        <input type="text" [(ngModel)]="carromodel.empresa_id"
+        class="form-control" id="empresa_id" name="empresa_id" placeholder="Cadastre seu telefone" required #empresa_id="ngModel"  >
+        <div [hidden]="!empresa_id.pristine" class="alert alert-danger">Informa o ID da Empresa</div>
+      </div>
+
+
+
+
+        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

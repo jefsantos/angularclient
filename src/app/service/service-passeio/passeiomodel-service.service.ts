@@ -11,7 +11,7 @@ export class PasseiomodelService {
   private PasseiomodelUrl: string;
  
   constructor(private http: HttpClient) {
-    this.PasseiomodelUrl = 'http://localhost:8090/service/passeio';
+    this.PasseiomodelUrl = 'http://localhost:8092/service/passeio';
   }
  
   public findAll(): Observable<Passeiomodel[]> {
