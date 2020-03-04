@@ -1,0 +1,24 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      
+        <div class="form-group">
+          <label for="nome_passeio">Passeio: </label>
+          <input type="text" [(ngModel)]="passeiomodel.nome_passeio" 
+            class="form-control" id="nome_passeio" name="nome_passeio" placeholder="Informe seu nome"
+            required #nome_passeio="ngModel">
+        </div>
+        <div [hidden]="!nome_passeio.pristine" class="alert alert-danger">Name is required</div>
+
+        <div class="form-group">
+          <label for="valor_passeio">Valor</label>
+          <input type="text" [(ngModel)]="passeiomodel.valor_passeio" 
+            class="form-control" id="valor_passeio" name="valor_passeio" placeholder="Cadastre seu Valor" required #valor_passeio="ngModel">
+          <div [hidden]="!valor_passeio.pristine" class="alert alert-danger">Campo valor Obrigatorio</div>
+        </div>
+
+        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+
