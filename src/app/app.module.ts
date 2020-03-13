@@ -1,3 +1,4 @@
+import { EmpresamodelService } from 'src/app/service/empresamodel.service';
 import { CarroListComponent } from './carro-list/carro-list.component';
 
 import { UserListComponent } from './pessoa-list/user-list.component';
@@ -7,22 +8,32 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
-import { PessoamodelFormComponent } from './pessoamodel-form/pessoamodel-form.component';
 import { AppRoutingModule } from './app-routing.module';
-
-
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
+import { PessoamodelFormComponent } from './pessoamodel-form/pessoamodel-form.component';
 import { PessoamodelService } from './service/pessoamodel.service';
 
+
+import { PasseiomodelService } from './service/service-passeio/passeiomodel-service.service';
+
+
+
+
+
 import { CarromodelService } from './service/carromodel.service';
+import { CarromodelFormComponent } from './carromodel-form/carromodel-form.component';
 
 import { PasseiomodelFormComponent } from './passeiomodel-form/passeiomodel-form.component';
-import { CarromodelFormComponent } from './carromodel-form/carromodel-form.component';
 import { PasseioListComponent } from './passeio-list/passeio-list.component';
-import { PasseiomodelService } from './service/service-passeio/passeiomodel-service.service';
+
+
+import { EmpresamodelFormComponent } from './model/empresamodel-form/empresamodel-form.component';
+import { EmpresaListComponent } from './empresa-list/empresa-list.component';
+
+
 
 
 
@@ -32,10 +43,17 @@ import { PasseiomodelService } from './service/service-passeio/passeiomodel-serv
     AppComponent,
     UserListComponent,
     CarroListComponent,
+    EmpresaListComponent,
+
     PessoamodelFormComponent,
     PasseiomodelFormComponent,
-    CarromodelFormComponent,
+    EmpresamodelFormComponent,
+    CarromodelFormComponent,    
+
     PasseioListComponent
+
+
+
     
   ],
   imports: [
@@ -44,7 +62,7 @@ import { PasseiomodelService } from './service/service-passeio/passeiomodel-serv
     HttpClientModule,
     FormsModule
   ],
-  providers: [PessoamodelService, PasseiomodelService, CarromodelService],
+  providers: [PessoamodelService, PasseiomodelService, CarromodelService, EmpresamodelService],
   
   bootstrap: [AppComponent]
 })

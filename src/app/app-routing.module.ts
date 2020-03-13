@@ -10,17 +10,21 @@ import { PasseioListComponent } from './passeio-list/passeio-list.component';
 import { PasseiomodelFormComponent } from './passeiomodel-form/passeiomodel-form.component';
 import{CarromodelFormComponent} from './carromodel-form/carromodel-form.component'
 import { from } from 'rxjs';
+import { EmpresaListComponent } from './empresa-list/empresa-list.component';
+import { EmpresamodelFormComponent } from './model/empresamodel-form/empresamodel-form.component';
 
  
 const routes: Routes = [
   { path: 'pessoas', component: UserListComponent },
   { path: 'passeios', component: PasseioListComponent },
   {path:'carros', component:CarroListComponent},
+  {path:'empresas', component:EmpresaListComponent},
 
 
   { path: 'addpass', component: PasseiomodelFormComponent},
   { path: 'adduser', component: PessoamodelFormComponent },
-  { path: 'addcar', component: CarromodelFormComponent }
+  { path: 'addcar', component: CarromodelFormComponent },
+  { path: 'addenterprise', component: EmpresamodelFormComponent }
 
 ];
  
