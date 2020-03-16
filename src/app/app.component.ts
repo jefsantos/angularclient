@@ -10,6 +10,6 @@ export class AppComponent {
 
 
   constructor() {
-    this.title = 'Folha Descentralizada Angular';
+    this.title = 'SGR';
   }
 }
