@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'addpass', component: PasseiomodelFormComponent},
   { path: 'adduser', component: PessoamodelFormComponent },
   { path: 'addcar', component: CarromodelFormComponent },
-  { path: 'addenterprise', component: EmpresamodelFormComponent }
+  { path: 'addcompany', component: EmpresamodelFormComponent }
 
 ];
  

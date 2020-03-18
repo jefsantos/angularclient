@@ -3,12 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 
-
+import { ActivatedRoute, Router } from '@angular/router';
  
 @Injectable()
 export class PasseiomodelService {
  
   private PasseiomodelUrl: string;
+  
+
  
   constructor(private http: HttpClient) {
     this.PasseiomodelUrl = 'http://localhost:8092/service/passeio';
@@ -24,7 +26,10 @@ export class PasseiomodelService {
 
   excluir(id: number): Observable<any> {
     return this.http.delete(`${this.PasseiomodelUrl}/${id}`, { responseType: 'text' });
+    
   }
+
+
 
 
 

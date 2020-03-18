@@ -3,14 +3,14 @@
       <form (ngSubmit)="onSubmit()" #userForm="ngForm">
       
         <div class="form-group">
-          <label for="nome">Passeio: </label>
+          <label for="nome">Empresa: </label>
           <input type="text" [(ngModel)]="empresamodel.nome" 
-            class="form-control" id="nome" name="nome" placeholder="O nome"
+            class="form-control" id="nome" name="nome" placeholder="Nome da Empresa"
             required #nome="ngModel">
         </div>
-        <div [hidden]="!nome.pristine" class="alert alert-danger">Name is required</div>
+        <div [hidden]="!nome.pristine" class="alert alert-danger">Campo Obrigatório</div>
 
-        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Enviar</button>
       </form>
     </div>
   </div>
